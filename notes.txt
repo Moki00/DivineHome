@@ -1,4 +1,13 @@
+file structure
 
+"C:\_git\DivineHome\index.html"
+"C:\_git\DivineHome\LICENSE"
+"C:\_git\DivineHome\notes.txt"
+"C:\_git\DivineHome\README.md"
+"C:\_git\DivineHome\scripts.js"
+"C:\_git\DivineHome\styles.css"
+"C:\_git\DivineHome\.vscode"
+"C:\_git\DivineHome\pics"
 
 Eric, Owner 
 Eric has been involved in many home renovations for over 20 years! His knowledge is extensive when it comes to planning and finishing any size project. He's spent his most recent years in the industry on commercial job sites, so no job is too big for him to handle. 
@@ -13,9 +22,9 @@ Contact:
 We are committed to maintaining constant communication with our customers until the job is completed. For a free quote or any questions, please reach out to us. We look forward to serving you!
 
 Eric & Mandy
-Calera, Alabama, United States
+Calera, Alabama
 
-205.777.7271
+205-777-7271
 205.777.1485
 
 Hours
@@ -37,7 +46,7 @@ Current Deals
 Exciting News
 20+ years in the making, Divine Homes Services is ready to serve you! What started as a side hustle for a father of four has become our family passion and growing business! Celebrate with us by allowing us to share the dream you have for your space!
 
-Common Questions
+
 "How much it will cost?"
 We give free quotes that give detailed descriptions of costs for your project. 
 
@@ -49,7 +58,6 @@ During a renovation, if it can go wrong- it most certainly might! Our goal is to
 
 Great Service
 Divine Homes Services is dedicated to providing customers with excellent service! We welcome questions, concerns, and critique so that we can put your mind at ease while your job is completed.
-
 
 Permits Simplified
 Renovations and installations require paperwork and permits. As certified contractors, we know what papers need to be filed and what permits need to be obtained in Alabama.
