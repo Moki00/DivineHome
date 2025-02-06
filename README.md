@@ -1,1 +1,5 @@
-This is a website for a small Home Service group
+# website for a Home Service Company
+
+## email thru king.sendai
+
+### working on now Feb 2025
