@@ -10,8 +10,8 @@ document
     // Collect form data
     const formData = {
       name: this.querySelector("[name='from_name']").value,
-      phone: this.querySelector("[name='phone_number']").value,
       email: this.querySelector("[name='email']").value,
+      phone: this.querySelector("[name='phone_number']").value,
       message: this.querySelector("[name='message']").value,
     };
 

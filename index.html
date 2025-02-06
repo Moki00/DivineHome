@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <!-- Basic -->
     <meta charset="utf-8" />
@@ -25,14 +25,20 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     />
-    <!-- bootstrap core css -->
+    <!-- bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <!-- font awesome style -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet" />
-    <!-- responsive style -->
-    <link href="css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- responsive style CSS -->
+    <link rel="stylesheet" href="css/responsive.css"/>
+
+    <!-- Scripts: Utilities -->
+    <script defer src="/js/scripts.js"></script>
+
+    <!-- email -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   </head>
 
   <body>
@@ -110,7 +116,7 @@
                   We fix what others can't. Reliable, professional, and
                   affordable.
                 </p>
-                <a href="#contact" class="btn">Get a Quote</a>
+                <a href="contact.html" class="btn">Get a Quote</a>
               </div>
             </div>
             <div class="col-md-6">
@@ -357,30 +363,32 @@
 
     <!-- end client section -->
 
-    <!-- contact section -->
+    <!-- Contact Form -->
 
-    <section class="contact_section layout_padding">
+    <section class="contact_section layout_padding" >
       <div class="container">
         <div class="heading_container">
           <h2>Contact Us</h2>
         </div>
         <div class="row">
           <div class="col-md-6">
-            <form action="">
+            <form action="" id="contactForm">
               <div>
-                <input type="text" placeholder="Name" />
+                <input type="text" placeholder="Name" id="name" name="from_name" />
               </div>
               <div>
-                <input type="text" placeholder="Phone Number" />
+                <input type="text" placeholder="Phone Number" id="phone" name="phone_number"/>
               </div>
               <div>
-                <input type="email" placeholder="Email" />
+                <input type="email" placeholder="Email" id="email" name="email"/>
               </div>
               <div>
-                <input type="text" class="message-box" placeholder="Message" />
+                <input type="text" class="message-box" placeholder="Message" id="message" name="message"/>
               </div>
               <div class="d-flex">
-                <button>SEND</button>
+                <button
+                id="submit"
+                type="submit">SEND</button>
               </div>
             </form>
           </div>
@@ -476,4 +484,5 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
     <!-- End Google Map -->
   </body>
+
 </html>
