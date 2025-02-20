@@ -1,11 +1,11 @@
 // Email form
 document
-  .getElementById("contactForm")
-  .addEventListener("submit", async function (event) {
+  .getElementById('contactForm')
+  .addEventListener('submit', async function (event) {
     event.preventDefault();
 
-    // init("USER_ID");
-    emailjs.init("k_mqvfpXwVIJ2nuSw");
+    // init "USER_ID" from EmailJS
+    emailjs.init('k_mqvfpXwVIJ2nuSw');
 
     // Collect form data
     const formData = {
@@ -17,13 +17,13 @@ document
 
     // emailjs:SERVICE_ID-TEMPLATE_ID-formData
     emailjs
-      .send("service_owu350n", "template_vna2gyi", formData)
+      .send('service_owu350n', 'template_vna2gyi', formData)
       .then(() => {
-        alert("Thank you for your message! We will get back to you soon.");
+        alert('Thank you for your message! We will get back to you soon.');
         this.reset();
       })
-      .catch((error) => {
-        console.error("EmailJS error:", error);
-        alert("Error sending your message. Please try again later.");
+      .catch(error => {
+        console.error('EmailJS error:', error);
+        alert('Error sending your message. Please try again later.');
       });
   });
