@@ -2,9 +2,10 @@ import API_BASE_URL from './config.js';
 
 document
   .getElementById('contactForm')
-  .addEventListener('submit', async function (e) {
-    e.preventDefault();
+  .addEventListener('submit', async function (event) {
+    event.preventDefault();
 
+    // Collect form data
     const formData = {
       from_name: document.getElementById('name').value,
       phone_number: document.getElementById('phone').value,
