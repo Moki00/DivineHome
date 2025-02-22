@@ -5,11 +5,10 @@ document
   .addEventListener('submit', async function (event) {
     event.preventDefault();
 
-    console.log('Form sent to backend');
-
+    // Disable submit button to prevent multiple submissions
     const submitButton = document.getElementById('submit');
     submitButton.disabled = true;
-    submitButton.innerHTML = 'Sending...'; // Change button text
+    submitButton.innerHTML = 'Sending...';
 
     // Collect form data
     const formData = {
@@ -18,8 +17,6 @@ document
       email: document.getElementById('email').value,
       message: document.getElementById('message').value,
     };
-
-    console.log('Form data:', formData);
 
     try {
       const response = await fetch(`${API_BASE_URL}/api/contact`, {
@@ -31,7 +28,6 @@ document
       if (!response.ok) {
         const errorMessage = await response.json();
         console.error('Server error:', errorMessage);
-        console.log('Error message:', errorMessage.message);
         alert(errorMessage.message); // rate limit message
         return;
       }
