@@ -7,7 +7,33 @@ document.addEventListener('DOMContentLoaded', function () {
   contactForm.addEventListener('submit', async function (event) {
     event.preventDefault();
 
-    // Disable submit button to prevent multiple submissions
+    // Validate form fields
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (name.length < 2) {
+      alert('Enter a valid name.');
+      return;
+    }
+
+    if (!/^\d{10}$/.test(phone)) {
+      alert('Enter a valid phone number.');
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      alert('Enter a valid email address.');
+      return;
+    }
+
+    if (message.length < 4) {
+      alert('Message must be more than 10 letters.');
+      return;
+    }
+
+    // Disable button to prevent multiple submissions
     submitButton.disabled = true;
     submitButton.innerHTML = 'Sending...';
 
