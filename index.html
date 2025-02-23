@@ -350,7 +350,7 @@
                   </div>
                 </div>
                 <div class="client_text">
-                  <p>Need more reviews to add</p>
+                  <p>Looking forward to your review</p>
                 </div>
               </div>
             </div>
@@ -375,6 +375,7 @@
                   placeholder="Name"
                   id="name"
                   name="from_name"
+                  required
                 />
               </div>
               <div>
@@ -398,12 +399,28 @@
               <div>
                 <input
                   type="text"
+                  class="message-box"
                   placeholder="Message"
                   id="message"
                   name="message"
-                  class="message-box"
+                  required
                 />
               </div>
+              <div>
+                <label for="file">Attach a file (Image, Drawing):</label>
+                <input
+                  type="file"
+                  id="file"
+                  name="file"
+                  accept=".jpg,.jpeg,.png,.pdf,.docx,.txt"
+                />
+              </div>
+              <!-- Hidden reCAPTCHA token (reCAPTCHA Enterprise on GCP) -->
+              <input
+                type="hidden"
+                id="recaptcha_token"
+                name="recaptcha_token"
+              />
               <div class="d-flex">
                 <button id="submit" type="submit">SEND</button>
               </div>
