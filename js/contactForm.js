@@ -1,12 +1,13 @@
 import API_BASE_URL from './config.js';
 
-document
-  .getElementById('contactForm')
-  .addEventListener('submit', async function (event) {
+document.addEventListener('DOMContentLoaded', function () {
+  const contactForm = document.getElementById('contactForm');
+  const submitButton = document.getElementById('submit');
+
+  contactForm.addEventListener('submit', async function (event) {
     event.preventDefault();
 
     // Disable submit button to prevent multiple submissions
-    const submitButton = document.getElementById('submit');
     submitButton.disabled = true;
     submitButton.innerHTML = 'Sending...';
 
@@ -39,6 +40,7 @@ document
       alert('Something went wrong. Please try again.');
     } finally {
       submitButton.disabled = false;
-      submitButton.innerHTML = 'Send'; // Change button text
+      submitButton.innerHTML = 'Send'; // Reset submit button
     }
   });
+});

@@ -119,6 +119,7 @@
                   placeholder="Name"
                   id="name"
                   name="from_name"
+                  required
                 />
               </div>
               <div>
@@ -146,8 +147,15 @@
                   placeholder="Message"
                   id="message"
                   name="message"
+                  required
                 />
               </div>
+              <!-- Hidden reCAPTCHA token (reCAPTCHA Enterprise on GCP) -->
+              <input
+                type="hidden"
+                id="recaptcha_token"
+                name="recaptcha_token"
+              />
               <div class="d-flex">
                 <button id="submit" type="submit">SEND</button>
               </div>
