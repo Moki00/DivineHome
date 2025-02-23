@@ -38,18 +38,22 @@ document.addEventListener('DOMContentLoaded', function () {
     submitButton.innerHTML = 'Sending...';
 
     // Collect form data
-    const formData = {
-      from_name: document.getElementById('name').value,
-      phone_number: document.getElementById('phone').value,
-      email: document.getElementById('email').value,
-      message: document.getElementById('message').value,
-    };
+    const formData = new FormData();
+    formData.append('from_name', document.getElementById('name').value);
+    formData.append('phone_number', document.getElementById('phone').value);
+    formData.append('email', document.getElementById('email').value);
+    formData.append('message', document.getElementById('message').value);
+
+    // Append file if selected
+    const fileInput = document.getElementById('file');
+    if (fileInput.files.length > 0) {
+      formData.append('file', fileInput.files[0]);
+    }
 
     try {
       const response = await fetch(`${API_BASE_URL}/api/contact`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: formData, // Send form data
       });
 
       if (!response.ok) {
